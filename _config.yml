@@ -85,10 +85,10 @@ author:
   bio              : "To seek, and not to yield"
   location         : "Location"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+#  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+#  googlescholar    : "http://yourfullgooglescholarurl.com"
+  email            : "qianchenchen419@gmail.com"
+#  researchgate     :  # example: # "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
   codepen          :
