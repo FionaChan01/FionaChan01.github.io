@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Qianchen Chen/ Fiona's homepage"
 title_separator          : "-"
 name                     : &name "Qianchen Chen"
-description              : &description "personal description"
+description              : &description "To seek!"
 url                      : https://FionaChan01.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
@@ -80,9 +80,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
-  avatar           : "fiona.png"
-  bio              : "Your biography for the left-hand sidebar"
+  name             : "Qianchen Chen (Fiona)"
+  avatar           : "fiona.jpg"
+  bio              : "To seek, and not to yield"
   location         : "Location"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
