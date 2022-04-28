@@ -57,7 +57,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : @FionaCh21599033
 facebook:
   username               :
   app_id                 :
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Qianchen Chen (Fiona)"
   avatar           : "fifi.jpg"
-  bio              : "Senior Student majoring Computer Science in Chongqing University"
+  bio              : "Senior Student majoring in Computer Science at Chongqing University"
   location         : "Chongqing, China"
   employer         :
 #  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
@@ -109,7 +109,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "@FionaCh21599033"
+  twitter          :
   vine             :
   weibo            :
   xing             :
