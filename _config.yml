@@ -81,9 +81,9 @@ analytics:
 # Site Author
 author:
   name             : "Qianchen Chen (Fiona)"
-  avatar           : "fiona.JPG"
+  avatar           : "fifi.jpg"
   bio              : "To seek, and not to yield \n Senior Student majoring in computer science Chongqing University"
-  location         : "Location"
+  location         : "Chongqing, China"
   employer         :
 #  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
 #  googlescholar    : "http://yourfullgooglescholarurl.com"
@@ -96,14 +96,14 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : "https://github.com/FionaChan01"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  linkedin         : "https://www.linkedin.cn/incareer/in/芊辰-陈-7183701b3"
+#  orcid            : "http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
