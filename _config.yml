@@ -57,7 +57,8 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-username               : #&FionaCh21599033
+username               : &twitter
+#&FionaCh21599033
 facebook:
   username               :
   app_id                 :
