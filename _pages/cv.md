@@ -18,11 +18,6 @@ Education
 	* GPA: 3.70/4.00
 	* Related Course: hardware comprehensive design (excellent), software engineering (96), operating system (93), algorithm analysis and design (92), software comprehensive design (excellent), mathematical model (93), computer organization principle (91), digital logic (93), optimization technology (88), Java program development (92), data structure (88), discrete mathematics and applications (97), fundamentals of computer programming II (91), fundamentals of computer programming I (96)
 
-# Work experience
-
-* **Summer 2022: Software Engineer Intern**
-  * Microsoft Shanghai, C+AI
-  * Duties included: back-end work & algorithm designing 
 # Project experience
 
 - **Intelligent diagnosis APP "IntelliTriage-a new generation of hospital consultation integrated platform"**
@@ -43,6 +38,14 @@ Education
 	- Technology: verilog
 	- Intro: This project implemented five-stage pipeline CPU with exception handling module based on MIPS instruction set and a write-back cache.
 	- Result: Tested by basic benchmarks, the project ended with excellence score.
+
+# Work experience
+
+- **Summer 2022: Software Engineer Intern**
+
+	* Microsoft Shanghai, C+AI
+
+	* Duties included: back-end work & algorithm designing 
 
 
 Service & leadership
