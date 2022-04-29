@@ -18,9 +18,8 @@ Education
 	* GPA: 3.70/4.00
 	* Related Course: hardware comprehensive design (excellent), software engineering (96), operating system (93), algorithm analysis and design (92), software comprehensive design (excellent), mathematical model (93), computer organization principle (91), digital logic (93), optimization technology (88), Java program development (92), data structure (88), discrete mathematics and applications (97), fundamentals of computer programming II (91), fundamentals of computer programming I (96)
 
+# Work experience
 
-Work experience
-======
 * **Summer 2022: Software Engineer Intern**
   * Microsoft Shanghai, C+AI
   * Duties included: back-end work & algorithm designing 
@@ -47,7 +46,7 @@ Work experience
 	- Result: Tested by basic benchmarks, the project ended with excellence score.
 
 
-Service and leadership
+Service & leadership
 ======
 - **Vice President**
 	- Association: Chongqing University information security society
@@ -62,7 +61,7 @@ Service and leadership
 	- Influence: Organized more than 10 academic counseling activities, and provided help for more than 100 people with learning and life doubts.
 
 
-# Honors & Awards
+# Honors & awards
 
 | Type   | Title                                                        | Year      |
 | ------ | ------------------------------------------------------------ | --------- |
