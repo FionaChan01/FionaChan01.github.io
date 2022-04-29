@@ -209,7 +209,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-      comments: true
  _teaching
  - scope:
      path: ""
