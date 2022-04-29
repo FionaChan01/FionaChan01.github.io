@@ -23,7 +23,6 @@ Education
 * **Summer 2022: Software Engineer Intern**
   * Microsoft Shanghai, C+AI
   * Duties included: back-end work & algorithm designing 
-  * Supervisor: Liangjun He
 # Project experience
 
 - **Intelligent diagnosis APP "IntelliTriage-a new generation of hospital consultation integrated platform"**
