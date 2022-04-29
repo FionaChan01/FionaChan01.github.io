@@ -66,14 +66,21 @@ Service and leadership
 
 # Honors & Awards
 
-- Awards |National Finalist Award of the 7th China International "Internet+" University Student Innovation and Entrepreneurship Competition (Industry Track) , 2021
-- Awards | Chongqing First Prize of the 7th China International "Internet+" University Student Innovation and Entrepreneurship Competition (Industrial Track), 2021
-- Award | Third Prize of Huawei Cloud Artificial Intelligence Competition (Innovation and Creativity Track) (top 3.3% of the municipality), 2021
-- Awards | Third Prize of Chongqing University Mathematics Competition (Non-Math Major), 2020
-- Awards | Mathematical Contest in Modeling/Interdisciplinary Contest in Modeling Successful Participant, 2020
-- Honors | National Scholarship (top 1.7% of the major), 2020
-- Honors | Chongqing University Comprehensive Scholarship A twice (top 2.0% of the major), B twice (top 8.3% of the major), 2019-2021
-- Honors | Outstanding Student of Chongqing University Twice (Top 4.7% of the major), 2020-2021
+Awards |National Finalist Award of the 7th China International "Internet+" University Student Innovation and Entrepreneurship Competition (Industry Track) | 2021
+
+Awards | Chongqing First Prize of the 7th China International "Internet+" University Student Innovation and Entrepreneurship Competition (Industrial Track) | 2021
+
+Award | Third Prize of Huawei Cloud Artificial Intelligence Competition (Innovation and Creativity Track) (top 3.3% of the municipality) | 2021
+
+Awards | Third Prize of Chongqing University Mathematics Competition (Non-Math Major) | 2020
+
+Awards | Mathematical Contest in Modeling/Interdisciplinary Contest in Modeling Successful Participant | 2020
+
+Honors | National Scholarship (top 1.7% of the major) | 2020
+
+Honors | Chongqing University Comprehensive Scholarship A twice (top 2.0% of the major), B twice (top 8.3% of the major) | 2019-2021
+
+Honors | Outstanding Student of Chongqing University Twice (Top 4.7% of the major) | 2020-2021
 
 # Skills, Certifications & Others
 
