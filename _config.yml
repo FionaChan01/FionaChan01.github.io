@@ -7,11 +7,11 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Qianchen Chen/ Fiona's homepage"
+title                    : "Your Name / Site Title"
 title_separator          : "-"
-name                     : &name "Qianchen Chen"
-description              : &description "To seek!"
-url                      : https://FionaChan01.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Your Name"
+description              : &description "personal description"
+url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -57,8 +57,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-username               : &twitter
-#&FionaCh21599033
+  username               : &twitter
 facebook:
   username               :
   app_id                 :
@@ -81,15 +80,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Qianchen Chen (Fiona)"
-  avatar           : "fifi.jpg"
-  bio              : "Senior Student majoring in Computer Science at Chongqing University"
-  location         : "Chongqing, China"
+  name             : "Your Sidebar Name"
+  avatar           : "profile.png"
+  bio              : "Your biography for the left-hand sidebar"
+  location         : "Location"
   employer         :
-#  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-#  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            : "qianchenchen419@gmail.com"
-#  researchgate     :  # example: # "https://www.researchgate.net/profile/yourprofile"
+  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  googlescholar    : "http://yourfullgooglescholarurl.com"
+  email            :
+  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
   codepen          :
@@ -97,20 +96,20 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "FionaChan01"
+  github           : "academicpages"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://www.linkedin.cn/incareer/in/芊辰-陈-7183701b3"
-#  orcid            : "http://orcid.org/yourorcidurl"
+  linkedin         :
+  orcid            : "http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          :
+  twitter          : "replacethistwitterhandle"
   vine             :
   weibo            :
   xing             :
@@ -210,16 +209,16 @@ defaults:
     values:
       layout: single
       author_profile: true
-#  _teaching
- - scope:
-     path: ""
-     type: teaching
-   values:
-     layout: single
-     author_profile: true
-     share: true
-     comments: true
-  #_publications
+  # _teaching
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _publications
   - scope:
       path: ""
       type: publications
@@ -228,16 +227,16 @@ defaults:
       author_profile: true
       share: true
       comments: true
- #_portfolio
- - scope:
-     path: ""
-     type: portfolio
-   values:
-     layout: single
-     author_profile: true
-     share: true
-     comment: true
-  #_talks
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _talks
   - scope:
       path: ""
       type: talks
