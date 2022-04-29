@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-
+----------
 
 Education
 ======
@@ -66,11 +66,13 @@ Service and leadership
 
 # Honors & Awards
 
+| :------:| :----: | :----: |
+
 Awards |National Finalist Award of the 7th China International "Internet+" University Student Innovation and Entrepreneurship Competition (Industry Track) | 2021
 
 Awards | Chongqing First Prize of the 7th China International "Internet+" University Student Innovation and Entrepreneurship Competition (Industrial Track) | 2021
 
-Award | Third Prize of Huawei Cloud Artificial Intelligence Competition (Innovation and Creativity Track) (top 3.3% of the municipality) | 2021
+Awards | Third Prize of Huawei Cloud Artificial Intelligence Competition (Innovation and Creativity Track) (top 3.3% of the municipality) | 2021
 
 Awards | Third Prize of Chongqing University Mathematics Competition (Non-Math Major) | 2020
 
