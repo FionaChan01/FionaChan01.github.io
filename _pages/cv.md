@@ -76,7 +76,7 @@ Service & leadership
 | Honors | Chongqing University Comprehensive Scholarship A twice (top 2.0% of the major), B twice (top 8.3% of the major) | 2019-2021 |
 | Honors | Outstanding Student of Chongqing University Twice (Top 4.7% of the major) | 2020-2021 |
 
-# Skills, Certifications & Others
+# Skills, certifications & others
 
 - Skills: python, java, C/C++, vue, spring boot, Andriod, SQL , verilog, powerdesinger
 - Certifications: Huawei Certified Kunpeng Application Development Engineer (HCIA)
