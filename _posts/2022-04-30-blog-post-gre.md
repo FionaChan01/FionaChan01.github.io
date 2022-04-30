@@ -1,7 +1,7 @@
 ---
 title: 'FiFi‘s Blog：About GRE'
 date: 2022-04-30
-permalink: /posts/2022/04/blog-post-1/
+permalink: /posts/2022/04/blog-post-gre/
 tags:
   - Language	
   - Life Sharing
