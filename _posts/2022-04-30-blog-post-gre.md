@@ -43,6 +43,8 @@ https://www.bilibili.com/video/BV1NK4y1s7Z7
 
 	  最好的单词书：《GRE核心词汇考法精析》（要你命3000）
 
+	  <a>https://book.douban.com/subject/6848105/</a>
+	
 	  ![img](/Users/fifi/Documents/GitHub/FionaChan01.github.io/_posts/2022-04-30-blog-post-gre.assets/s27883439.jpg)
 	
 	- 我当时为了追求高效背单词（因为真的好难啊这单词），专门买了杨鹏老师的《17天搞定GRE单词》，
