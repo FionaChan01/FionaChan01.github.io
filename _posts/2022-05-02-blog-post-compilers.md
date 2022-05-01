@@ -67,11 +67,14 @@ tags:
 
 - 如何替换
 
-	- A -> Aα | ß    替换为：   A -> ßA'        A' -> αA' | ε
+	- 直接左递归
+		$$
+		A -> Aα | ß    \   替换为：   A -> ßA'     ;\         A' -> αA' | ε
+		$$
 
-		<img src="/Users/fifi/Documents/GitHub/FionaChan01.github.io/_posts/2022-05-02-blog-post-compilers.assets/image-20220501204239456.png" alt="image-20220501204239456" style="zoom: 35%;" />
+	- 间接左递归
 
-		
+		![img](../post_image/post_compiler/GsyxIK.png)
 
 #### 语法错误的处理
 
