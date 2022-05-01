@@ -33,8 +33,9 @@ tags:
 - **扫盲**
 
 	- 请先看GRE考试扫盲视频：内含GRE的流程、考试内容介绍 
-
-		https://www.bilibili.com/video/BV1NK4y1s7Z7
+<a>
+https://www.bilibili.com/video/BV1NK4y1s7Z7
+</a>
 
 - **单词**
 
