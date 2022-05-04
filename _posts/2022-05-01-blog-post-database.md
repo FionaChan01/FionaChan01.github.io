@@ -181,15 +181,49 @@ tags:
 - 数据完整性设计 -> 关系模型的完整性约束
 
 	- 概要
+
 		- 定义：对关系的某种约束条件
 		- 目的：在于保证关系数据库中数据的正确性和可靠性
+
 	- 类型
-		- 实体完整性规则：在任何关系的任何一个元组中，主键的值不能为空值、也不能取重复的值
-			- 保证每一个元祖都是唯一的
-		- 域完整性规则（用户定义完整性规则）：根据实际情况，定义表中属性的取值范围
-			- 用于保证给定字段的数据有效性
-		- 参照完整性规则（引用完整性规则）：不允许一个关系中引用另一个关系中不存在的元祖
-			- 用于确保相关联的表间数据保持一致
+
+		- 实体完整性规则：在任何关系的任何一个元组中，主键的值不能为空值、也不能取重复的值 -> 保证每一个元祖都是唯一的
+
+			```sql
+			primary key ...
+			```
+
+			
+
+		- 域完整性规则（用户定义完整性规则）：根据实际情况，定义表中属性的取值范围 -> 用于保证给定字段的数据有效性
+
+		- 参照完整性规则（引用完整性规则）：不允许一个关系中引用另一个关系中不存在的元祖 -> 用于确保相关联的表间数据保持一致
+
+			```sql
+			foreign key ... references ...
+				on delete cascade # 不写时拒绝删除
+				on update cascade # 连带删除（修改）
+				set null/ default # 设置为空/ 默认值
+			```
+
+	- 其他
+
+		- 断言:当数据更新时，保持谓词为真, (否则拒绝更新)
+
+			```sql
+			create assertion <assertion-name> check <predicate>;
+			```
+
+		- 表上的授权：通过授权管理用户访问权限
+
+			```sql
+			grant insert on instructor to public
+			revoke select on branch from public
+			create role instructor
+			grant instructor to Amy
+			```
+
+			
 
 - 数据安全设计
 
@@ -343,7 +377,43 @@ tags:
 		from student join takes on student.id=takes.id; 
 		```
 
-		
+	- 视图
+
+	- SQL函数
+
+		> SQL除了提供一些常用的内建函数(聚集、日期、字符串转换等)外，  可编写存储过程(业务逻辑)并存于库中, 可在SQL/应用代码中调用
+
+		```sql
+		create function dept_count(dept_name varchar(20))
+		returns integer
+		begin
+			declare d_count integer;
+			select count(*) into d_count
+			from instructor
+			where instructor.dept_name = dept_name
+			return d_count;
+		end
+		```
+
+	- SQL过程
+
+		> 过程是一段SQL语句程序，而函数有处理和返回值
+
+		```sql
+		create procedure dept_count_proc(in dept_name carchar(20), out d_count integer)
+		begin
+			select count(*) into d_count
+			from instructor
+			where instructor.dept_name = dept_name
+		end
+		```
+
+	- 外部语言过程
+
+		> 外部语言过程：SQL允许用程序语言(Java,C#,C,C++)来定义函数或过程，
+		> 运行效率要高于SQL中定义的函数，用于完成无法在SQL中执行的计算。
+
+	- 触发器
 
 ### Ⅳ 系统运行和维护
 
