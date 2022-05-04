@@ -236,6 +236,62 @@ tags:
 		- Except -> 差
 		- Intersect -> 交
 
+	- 聚集函数的SQL实现
+
+		> *代笔选择所有属性
+
+		```sql
+		select avg (salary) as avg_salary
+		from instructor
+		where dept_name= 'Comp. Sci.';
+		
+		```
+
+		$$
+		g_{avg (salary)}(σ_{dept\_name='Comp. Sci.'}(instuctor))  
+		$$
+
+		-> 计算一个系的平均工资
+
+		```sql
+		select count (distinct ID)
+		from teachers
+		where semester ='Spring' and year=2010;
+		```
+
+		-> 计数前去除重复数组
+
+		```sql
+		select dept_name, avg (salary) # 平均工资的部门名
+		from instructor
+		group by dept_name # 指定计算范围（分组）
+		having avg (salary) > 42000; # 结果筛选
+		```
+
+	- SQL嵌套子查询
+
+		```sql
+		select dept_name, avg (salary)
+		from instructor
+		group by dept_name
+		having avg (salary) > 42000;
+		```
+
+		-> 找出在2009年秋季，但不在2010年春季同时开课的所有课程
+
+		```sql
+		select course_id
+		from section as S
+		where semester=‘Fall'  and year=2009 and
+		exist (select *
+		       from section as T
+		       where semester='Sring' amd   year=2010 and
+			S.course_id=T.course_id);
+		
+		```
+
+		-> 找出在2009年秋季和2010年春季同时开课的所有课程 
+
 
 ### Ⅳ 系统运行和维护
 
