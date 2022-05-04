@@ -316,6 +316,35 @@ tags:
 
 		-> 更新
 
+	- SQL支持的表间连接方式
+
+		```SQL
+		# 允许按照指定属性（可不同名连接），且连接表中连接属性都会出现
+		select name, course_id
+		from instructor, teaches
+		where instructor.ID= teaches.ID;
+		
+		# 按两表同名属性连接
+		select name, course_id
+		from instructor natural join teaches
+		
+		# 允许按照指定属性连接
+		select name, title
+		from (instructor natural join teaches) 
+		join course using(course_id);
+		
+		# 作用及查询结果表都相同，在连接表中连接属性都会出现(ID重复出现两次)
+		select *
+		from student, takes
+		where student.ID = takes.ID;
+		
+		# 只出现一次ID
+		select *
+		from student join takes on student.id=takes.id; 
+		```
+
+		
+
 ### Ⅳ 系统运行和维护
 
 - 运行系统
