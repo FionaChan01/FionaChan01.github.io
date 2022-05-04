@@ -238,7 +238,7 @@ tags:
 
 	- 聚集函数的SQL实现
 
-		> *代笔选择所有属性
+		> *代表选择所有属性
 
 		```sql
 		select avg (salary) as avg_salary
