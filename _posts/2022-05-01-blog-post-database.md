@@ -292,6 +292,29 @@ tags:
 
 		-> 找出在2009年秋季和2010年春季同时开课的所有课程 
 
+	- SQL数据操纵语言DML
+
+		```sql
+		delete from instructor
+		where dept_name='Finance'
+		```
+
+		-> 删除
+
+		```sql
+		insert into cource(course_id, title, dept_name, credits)
+		values('CS-437', 'Database systems', 'Comp.Sci', 4)
+		```
+
+		-> 插入
+
+		```sql
+		update instructor
+		set salary = salary * 1.03
+		where salary > 100000;
+		```
+
+		-> 更新
 
 ### Ⅳ 系统运行和维护
 
