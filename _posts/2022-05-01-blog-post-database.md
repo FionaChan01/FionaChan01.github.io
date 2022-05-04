@@ -201,7 +201,11 @@ tags:
 
 - 应用开发 --> SQL
 
+	- 创建数据库实例
+
 	- 定义数据结构
+
+		> 定义属性特征 + 说明语义约束
 
 		```sql
 		create table instructor
@@ -215,7 +219,22 @@ tags:
 		    );
 		```
 
-		
+	- 基本关系运算的SQL实现
+
+		```sql
+		Select name   # 投影
+		From instructor, department  # 自然连接
+		Where dept_name = 'Comp.Sci' and salary > 70000;  # 选择
+		```
+
+		对应关系运算：
+		$$
+		Π_{name}(σ_{dept\_name='Comp.Sci'\  and\ salaty>70000}(instuctor X department))
+		$$
+
+		- Union -> 并
+		- Except -> 差
+		- Intersect -> 交
 
 
 ### Ⅳ 系统运行和维护
