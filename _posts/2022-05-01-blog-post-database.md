@@ -176,8 +176,6 @@ tags:
 		>
 		> M：N -> 联系建为一新表，其主键由两个父实体的主键复合组成  
 
-- 
-
 - 数据库结构优化设计
 
 - 数据完整性设计 -> 关系模型的完整性约束
@@ -200,7 +198,25 @@ tags:
 ### Ⅲ 系统实现
 
 - 数据库实现
+
 - 应用开发 --> SQL
+
+	- 定义数据结构
+
+		```sql
+		create table instructor
+		(
+		    ID varchar(5),
+		    name varchar(20) not null,
+		    dept_name carchar(20),
+		    salary numeric(8,2),
+		    primary key(ID),
+		    foreign key(dept_name) reference department
+		    );
+		```
+
+		
+
 
 ### Ⅳ 系统运行和维护
 
