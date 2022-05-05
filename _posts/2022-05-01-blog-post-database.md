@@ -251,7 +251,7 @@ tags:
 
     ⁇ 如何进行模式分解
 
-    <a>https://blog.csdn.net/sumaliqinghua/article/details/86246762</a>
+    <a>https://blog.csdn.net/qq_43179428/article/details/105596526</a>
 
     - 第一范式 (1NF)
 
