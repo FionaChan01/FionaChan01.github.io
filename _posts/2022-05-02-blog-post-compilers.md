@@ -78,7 +78,7 @@ tags:
 
 	- 无环左递归
 
-		![img](../post_image/post_compiler/GsyxIK.png)
+		![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/GsyxIK.png)
 
 #### 3. 左公因子的提取
 
@@ -170,7 +170,7 @@ tags:
 
 	https://www.bilibili.com/video/BV1zW411t7YE?p=24
 
-	![img](../post_image/post_compiler/ll1.png)
+	![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/ll1.png)
 
 #### 5. 预测分析的错误恢复
 

@@ -358,7 +358,7 @@ tags:
 
     	- 计算
 
-    		![image-20220504121025590](../post_image/post_database/ok.png)
+    		![image-20220504121025590](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_database/ok.png)
 
     	- 例子🌰
 
@@ -390,7 +390,7 @@ tags:
 
   		> 将R 分解为 R1 和R2 ，如果是无损连接分解，那么应该满足：  
   		>
-  		> <img src="../post_image/post_database/module.png" alt="image-20220504121025590" style="zoom:40%;" />
+  		> <img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_database/module.png" />
 
   		- 将R分解为R1， R2，若R1交R2 -> R1或R2，则无损
   		- 将R 分解为(UV) 和(R-V)，如果U → V 在R上成立，那么分解是无损连接分解
@@ -598,7 +598,7 @@ tags:
 
 		> 用于备份或复制数据库
 
-		![image-20220504121025590](../post_image/post_database/trigger.png)
+		![image-20220504121025590](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_database/trigger.png)
 
 	- 用户自定义的类型
 
