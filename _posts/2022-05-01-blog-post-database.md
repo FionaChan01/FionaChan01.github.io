@@ -1,5 +1,5 @@
 ---
-title: 'FiFi‘s School Work: Data Base'
+title: 'FiFi‘s School Work: Database'
 date: 2022-05-01
 permalink: /posts/2022/05/blog-post-database/
 tags:
@@ -302,9 +302,9 @@ tags:
       如果一个模式被另一个模式包含，则去掉此被包含的模式。\\
       $$
 
-      ![image-20220505114347842](../post_image/post_database/3nf.png)
+      ![image-20220505114347842](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_database/3nf.png)
 
-      ![image-20220505114347842](../post_image/post_database/3nf2.png)
+      ![image-20220505114347842](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_database/3nf2.png)
 
     - BCNF&3NF的比较
 
