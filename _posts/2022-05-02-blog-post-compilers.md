@@ -272,6 +272,10 @@ tags:
 
 	- LR(0)自动机
 
+		> 和LL(1)的区别：栈里存放的是状态，而不是文法符号。
+		>
+		> 引入状态从而表示文法符号所处的具体位置，因此，一个文法符号可以对应多个状态。
+
 		<a>https://blog.csdn.net/Johan_Joe_King/article/details/79051993</a>
 
 		- 规范LR(0)项族集
@@ -289,19 +293,19 @@ tags:
 		  	- 构造方法：I 是文法G的一个项集，根据一下两个规则构造项集的闭包
 
 		  		- 将I的各个项加入CLOSURE(I)中
-
+		
 		  		- 如果A->α.Bβ在Closure(I)中，并且项B->.γ不在Closure(I)中，则加入这个项。不断应用该规则直到没有新项产生为止
-
+		
 		  	- 分类
 		
 		  		- 内核项：包括初始项S’ -> S以及点不在最左端的所有项
 		  		- 非内核项：除了初始项S’ -> S以及点在最左端的所有项
-
+		
 		  - GOTO(I, X)
 		
 		  	- 定义：项集I中所有形如[A->α.Xβ]的项所对应的项[A->αX.β]的集合的闭包（closure）
 		  	- 描述了当输入为X离开状态I的转换
-
+		
 		- 规范集族的算法
 		
 		  - 开始状态为CLOUSURE({[S' -> .S]})
@@ -309,16 +313,29 @@ tags:
 		
 		- LR语法分析算法
 		
-			- 组成：输入+输出+栈+驱动程序+语法分析表（Action + GOTO）
-			- ACTION函数：状态i + 终结符号a
-			- 格局：分析器的完整状态包括栈和雨下的输入
+		  - 组成：输入+输出+栈+驱动程序+语法分析表（Action + GOTO）
+		
+		  ![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/structure.png)
+		
+		  - 状态转换表Goto[i, X] : 决定目前状态 i 碰到文法符号 X 时该跳转到的目标状态
+		  - 动作表Action[i, a] : 决定目前状态 i 碰到输入符号 a 时采取的动作。三种可能的动作为：
+		  	- shift n(记为sn): 将状态n压进栈 (相当于移入符号a)
+		  	- reduce m(记为rm):使用第m条文法规则归约栈顶的内容
+		  	- accept(记为acc): 接受
+		  - 格局：分析器的完整状态包括栈和余下的输入
+		
+		- 语法分析表
+		
+			![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/analyzeTable.png)
 		
 		- 分析器实际行为
 		
-			- 若Action移入s，语法分析器执行移入操作，将下一个状态s移入栈中
-			- 若规约，则将r个状态符号弹出栈，输入符号不变
-			- 若Action接受，语法分析过程完成
-			- 若Action报错，语法分析器发现语法错误，调用错误恢复例程
+		  ![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/working.png)
+		
+		  - 若Action移入s，语法分析器执行移入操作，将下一个状态s移入栈中
+		  - 若规约，则将r个状态符号弹出栈，输入符号不变
+		  - 若Action接受，语法分析过程完成
+		  - 若Action报错，语法分析器发现语法错误，调用错误恢复例程
 		
 		![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/lr.png)
 
