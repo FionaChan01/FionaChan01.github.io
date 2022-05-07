@@ -264,80 +264,86 @@ tags:
 
 	- 项
 
-		> 一些状态的集合使分析器知道何时移入、规约
+	  > 一些状态的集合使分析器知道何时移入、规约
 
-		- 产生式加上一个位于它的体中某处的点
-		- 可表示为：基础文法的产生式编号 + 点的位置 -> 两个整数
-		- 项指明了在语法分析过程的给定点上，我们已经看到了一个产生式的哪些部分
+	  - 产生式加上一个位于它的体中某处的点
+	  - 可表示为：基础文法的产生式编号 + 点的位置 -> 两个整数
+	  - 项指明了在语法分析过程的给定点上，我们已经看到了一个产生式的哪些部分
 
 	- LR(0)自动机
 
-		> 和LL(1)的区别：栈里存放的是状态，而不是文法符号。
-		>
-		> 引入状态从而表示文法符号所处的具体位置，因此，一个文法符号可以对应多个状态。
+	  > 和LL(1)的区别：栈里存放的是状态，而不是文法符号。
+	  >
+	  > 引入状态从而表示文法符号所处的具体位置，因此，一个文法符号可以对应多个状态。
 
-		<a>https://blog.csdn.net/Johan_Joe_King/article/details/79051993</a>
+	  <a>https://blog.csdn.net/Johan_Joe_King/article/details/79051993</a>
 
-		- 规范LR(0)项族集
+	  - 规范LR(0)项族集
 
-		  > 提供了一个构建确定的有限状态机的基础，可用于语法分析决定
+	    > 提供了一个构建确定的有限状态机的基础，可用于语法分析决定
 
-		  - 增广文法
+	    - 增广文法
 
-		  	> 若G以S开头，则加入新开始符号S‘，和产生式S’ -> S
+	    	> 若G以S开头，则加入新开始符号S‘，和产生式S’ -> S
 
-		  	- 目的：告诉语法分析器何时应该停止语法分析并接受符号串
+	    	- 目的：告诉语法分析器何时应该停止语法分析并接受符号串
 
-		  - CLOSURE
+	    - CLOSURE
 
-		  	- 构造方法：I 是文法G的一个项集，根据一下两个规则构造项集的闭包
+	    	- 构造方法：I 是文法G的一个项集，根据一下两个规则构造项集的闭包
 
-		  		- 将I的各个项加入CLOSURE(I)中
-		
-		  		- 如果A->α.Bβ在Closure(I)中，并且项B->.γ不在Closure(I)中，则加入这个项。不断应用该规则直到没有新项产生为止
-		
-		  	- 分类
-		
-		  		- 内核项：包括初始项S’ -> S以及点不在最左端的所有项
-		  		- 非内核项：除了初始项S’ -> S以及点在最左端的所有项
-		
-		  - GOTO(I, X)
-		
-		  	- 定义：项集I中所有形如[A->α.Xβ]的项所对应的项[A->αX.β]的集合的闭包（closure）
-		  	- 描述了当输入为X离开状态I的转换
-		
-		- 规范集族的算法
-		
-		  - 开始状态为CLOUSURE({[S' -> .S]})
-		  - 假设文法符号串γ使自动机从开始状态0运行到某个状态j，如果下一个输入字符为a且状态j上有一个在a的转换，就移入a
-		
-		- LR语法分析算法
-		
-		  - 组成：输入+输出+栈+驱动程序+语法分析表（Action + GOTO）
-		
-		  ![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/structure.png)
-		
-		  - 状态转换表Goto[i, X] : 决定目前状态 i 碰到文法符号 X 时该跳转到的目标状态
-		  - 动作表Action[i, a] : 决定目前状态 i 碰到输入符号 a 时采取的动作。三种可能的动作为：
-		  	- shift n(记为sn): 将状态n压进栈 (相当于移入符号a)
-		  	- reduce m(记为rm):使用第m条文法规则归约栈顶的内容
-		  	- accept(记为acc): 接受
-		  - 格局：分析器的完整状态包括栈和余下的输入
-		
-		- 语法分析表
-		
-			![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/analyzeTable.png)
-		
-		- 分析器实际行为
-		
-		  ![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/working.png)
-		
-		  - 若Action移入s，语法分析器执行移入操作，将下一个状态s移入栈中
-		  - 若规约，则将r个状态符号弹出栈，输入符号不变
-		  - 若Action接受，语法分析过程完成
-		  - 若Action报错，语法分析器发现语法错误，调用错误恢复例程
-		
-		![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/lr.png)
+	    		- 将I的各个项加入CLOSURE(I)中
+	
+	    		- 如果A->α.Bβ在Closure(I)中，并且项B->.γ不在Closure(I)中，则加入这个项。不断应用该规则直到没有新项产生为止
+	
+	    	- 分类
+	
+	    		- 内核项：包括初始项S’ -> S以及点不在最左端的所有项
+	    		- 非内核项：除了初始项S’ -> S以及点在最左端的所有项
+	
+	    - GOTO(I, X)
+	
+	    	- 定义：项集I中所有形如[A->α.Xβ]的项所对应的项[A->αX.β]的集合的闭包（closure）
+	    	- 描述了当输入为X离开状态I的转换
+	
+	  - 规范集族的算法
+	
+	    - 开始状态为CLOUSURE({[S' -> .S]})
+	    - 假设文法符号串γ使自动机从开始状态0运行到某个状态j，如果下一个输入字符为a且状态j上有一个在a的转换，就移入a
+	
+	  - LR语法分析算法
+	
+	    - 组成：输入+输出+栈+驱动程序+语法分析表（Action + GOTO）
+	
+	    ![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/structure.png)
+	
+	    - 状态转换表Goto[i, X] : 决定目前状态 i 碰到文法符号 X 时该跳转到的目标状态
+	    - 动作表Action[i, a] : 决定目前状态 i 碰到输入符号 a 时采取的动作。三种可能的动作为：
+	    	- shift n(记为sn): 将状态n压进栈 (相当于移入符号a)
+	    	- reduce m(记为rm):使用第m条文法规则归约栈顶的内容
+	    	- accept(记为acc): 接受
+	    - 格局：分析器的完整状态包括栈和余下的输入
+	
+	  - 语法分析表
+	
+	  	![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/analyzeTable.png)
+	
+	  - 分析器实际行为
+	
+	    ![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/working.png)
+	
+	    - 若Action移入s，语法分析器执行移入操作，将下一个状态s移入栈中
+	    - 若规约，则将r个状态符号弹出栈，输入符号不变
+	    - 若Action接受，语法分析过程完成
+	    - 若Action报错，语法分析器发现语法错误，调用错误恢复例程
+	
+	  ![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/lr.png)
+	
+	- SLR语法分析表
+	
+		> 为了解决移入、规约冲突
+	
+		![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/slr.png)
 
 ## 三. 语义分析
 
