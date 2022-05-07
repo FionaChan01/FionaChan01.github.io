@@ -359,23 +359,33 @@ tags:
 
 	- 类型区别
 
-		![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/types.png)
+	  ![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/types.png)
 
 	- 分析表的构造
 
-		- 有效项
+	  - 有效项
 
-			![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/lr1.png)
+	  	![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/lr1.png)
 
-			![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/lr2.png)
+	  	![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/lr2.png)
 
-			![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/exp.png)
+	  	![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/exp.png)
 
-			![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/point.png)
+	  	![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/point.png)
 
 	- 项集族的构造方法
 
-		![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/lr1Algo.png)
+	  ![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/lr1Algo.png)
+	
+	- LR(1)分析表
+	
+		> 区别在于规则2：
+		>
+		> LR(0)分析表：若项集Ik包含归约项A→a.，对于所有a∈VT，则置ACTION[k,a]= rj，表示用第j个产生式进行归约。
+		>
+		> SLR(1)分析表：若项集Ik包含归约项A→a.，对于a∈FOLLOW(A)，则置ACTION[k,a]= rj，意为用第j个产生式进行归约。
+	
+		![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/at.png)
 
 
 ## 三. 语义分析
