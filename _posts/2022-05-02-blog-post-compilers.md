@@ -379,13 +379,31 @@ tags:
 	
 	- LR(1)分析表
 	
-		> 区别在于规则2：
-		>
-		> LR(0)分析表：若项集Ik包含归约项A→a.，对于所有a∈VT，则置ACTION[k,a]= rj，表示用第j个产生式进行归约。
-		>
-		> SLR(1)分析表：若项集Ik包含归约项A→a.，对于a∈FOLLOW(A)，则置ACTION[k,a]= rj，意为用第j个产生式进行归约。
+	  > 区别在于规则2：
+	  >
+	  > LR(0)分析表：若项集Ik包含归约项A→a.，对于所有a∈VT，则置ACTION[k,a]= rj，表示用第j个产生式进行归约。
+	  >
+	  > SLR(1)分析表：若项集Ik包含归约项A→a.，对于a∈FOLLOW(A)，则置ACTION[k,a]= rj，意为用第j个产生式进行归约。
 	
-		![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/at.png)
+	  ![img](https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_compiler/at.png)
+	
+	- LR(1)分析器
+	
+	  > 缺点：需要比SLR(1)多很多的状态
+	
+	- LALR(1)
+	
+		> LALR(1)分析器通过合并LR(1)中具有相同核心的项集，从而大大地减少了状态数
+		>
+		> 在所有的LR方法中，LALR比SLR强，比LR(1)弱。综合功能和效率，LALR(1)分析器通常是最佳的选择
+	
+	- LR 和 LL的比较
+	
+		> LL(1)根据FIRST(ai)确定使用哪条产生式；而LR(k)是在识别出整个a后,再往后看k个符号,然后确定使用哪条产生式。
+		>
+		> LL(1)文法都是LR(1)文法；都能用形式化方法实现
+	
+		
 
 
 ## 三. 语义分析
