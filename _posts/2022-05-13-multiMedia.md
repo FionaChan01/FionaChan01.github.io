@@ -1,11 +1,27 @@
 ---
-title: 'FiFi‘s School Work: Multimedia Technology'
-date: 2022-05-13
-permalink: /posts/2022/05/blog-post-multiMediaTech/
+title: 'FiFi‘s Life: The night of firefly'
+date: 2022-06-13
+permalink: /posts/2022/06/blog-post-firefly/
 tags:
-  - CS
-  - Knowledge
+  - Things
 ---
 
-重庆大学计算机学院 ｜ 22Spring ｜ 多媒体技术
+渝北庄园｜萤火虫之夜
 
+> 跟爸爸妈妈驱车一个半小时，一起去了渝北的一个农庄看萤火虫。老板对自然农业的看法真的好有前瞻性，他们农场推崇的就是不化肥、无农药、拒绝杀虫剂，这也进一步导致了萤火虫的到来和聚集（萤火虫只会在生态环境相当好的条件下出现）
+>
+> 妈妈询问老板说：“农田里好多光（萤火虫），可以下去看吗？”老板说，“不太行，农田里有蛇，有毒的没毒的都有，生态环境太好了没办法。”真的是一副万物生灵的景象啊
+>
+> 其实我还蛮享受这样的时刻的，和家人一起感受自然，空气从肺部自鼻腔都是清新的气息。唯一不太完美的是忘记带三脚架，即使调了相机的b门也只拍出星星点点般的光斑哈哈哈哈
+
+<img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_firefly/IMG_3311.heic"/>
+
+<img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_firefly/IMG_0942.jpg"/>
+
+<img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_firefly/IMG_0958.jpg"/>
+
+<img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_firefly/IMG_0994.jpg"/>
+
+<img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_firefly/IMG_0998.jpg"/>
+
+<img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_firefly/IMG_0999.jpg"/>
