@@ -10,6 +10,8 @@ redirect_from:
 
 -----
 
+> Mood 🤓: OMG, Just love STRANGER THINGS 4 !!!!!
+
 - 👋 Hi, I’m Qianchen (Fiona), happy to meet you here!
 - 🏫 I’m currently studying in Chongqing University as an undergraduate.
 - 👀 For now, I’m interested in FL and NLP, and these are the places where my recently research lays.
