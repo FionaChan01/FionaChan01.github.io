@@ -15,8 +15,9 @@ Education
 ======
 
 * **B.S. in Chongqing, China, Chongqing University, 2023 (expected)**
-	* GPA: 3.70/4.00
-	* Related Course: compilers (95), information security foundamentals(95), hardware comprehensive design (excellent), software engineering (96), operating system (93), algorithm analysis and design (92), software comprehensive design (excellent), mathematical model (93), computer organization principle (91), digital logic (93), optimization technology (88), Java program development (92), data structure (88), discrete mathematics and applications (97), fundamentals of computer programming II (91), fundamentals of computer programming I (96)
+	* GPA: 3.71/4.00
+	* Average weighted Score：89.5
+	* Related Course: linux operating systems(98), intelligent systems(95), compilers principles (95), information security foundamentals(95), hardware comprehensive design (excellent), software engineering (96), operating system (93), algorithm analysis and design (92), software comprehensive design (excellent), mathematical model (93), digital logic (93),  Java program development (92), discrete mathematics and applications (97), fundamentals of computer programming I (96)
 
 # Project experience
 
@@ -43,7 +44,8 @@ Education
 
 - **Summer 2022: Software Engineer Intern**
 
-	* Microsoft Shanghai, C+AI, Dev-Div
+	* Microsoft Shanghai, C+AI
+	* Group: Dev-Div
 	* Mentor: Biaozhun Gu
 	* Duties included: back-end work & algorithm designing 
 
