@@ -15,8 +15,8 @@ Education
 ======
 
 * **B.S. in Chongqing, China, Chongqing University, 2023 (expected)**
-	* GPA: 3.71/4.00
-	* Average weighted Score：89.5
+	* GPA: 3.72/4.00
+	* Average weighted Score：89.56
 	* Related Course: linux operating systems(98), intelligent systems(95), compilers principles (95), information security foundamentals(95), hardware comprehensive design (excellent), software engineering (96), operating system (93), algorithm analysis and design (92), software comprehensive design (excellent), mathematical model (93), digital logic (93),  Java program development (92), discrete mathematics and applications (97), fundamentals of computer programming I (96)
 
 # Project experience
