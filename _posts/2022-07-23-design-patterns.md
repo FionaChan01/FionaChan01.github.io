@@ -22,6 +22,8 @@ HeadFirst设计模式｜学习笔记
 
 > 定义了对象间的一对多依赖，当一个对象改变状态时，它所有的依赖者收到通知并且自动更新
 
+<img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_design_patterns/observer.png"/>
+
 - 需要使主题&观察者之间松耦合
 
 
