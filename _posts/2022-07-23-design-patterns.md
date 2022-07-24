@@ -25,6 +25,16 @@ HeadFirst设计模式｜学习笔记
 <img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_design_patterns/observer.png"/>
 
 - 需要使主题&观察者之间松耦合
+	- 主题：用一个共同的接口来更新观察者
+
+- java内置的观察者模式：java.util.Observable
+	- ⚠️ 可观察者是一个类而非接口 -> issues：java不支持多重继承，若某类想同时具有Observable类和另一类的行为，会十分困难
+
+- 有多个观察者时，不可以依赖特定的通知次序
+
+#### 3. 装饰者模式
+
+
 
 
 
@@ -36,7 +46,13 @@ HeadFirst设计模式｜学习笔记
 
 - 多用组合，少用继承
 
+	> 利用继承设计子类的行为，是在编译时静态决定的，而且所有子类会继承到相同的行为，但如果利用组合扩展对象的行为，就可以在运行时动态的进行扩展
+
 - 为了交互对象间的松耦合设计而努力
+
+- 类应该对扩展开放，对修改关闭
+
+	> 允许类容易扩展，再不修改现有代码的情况下，就可搭配新的行为，这样使设计可弹性应对改变
 
 	
 
