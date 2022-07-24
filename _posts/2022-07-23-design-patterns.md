@@ -14,11 +14,11 @@ HeadFirst设计模式｜学习笔记
 
 # Ⅰ 设计模式
 
-#### 1. 策略模式
+#### 1. 策略模式 Strategy Pattern
 
 > 定义了算法族，分别封装使他们可以互相替换，让算法的变化独立于算法的客户
 
-#### 2. 观察者模式
+#### 2. 观察者模式 Observer Pattern
 
 > 定义了对象间的一对多依赖，当一个对象改变状态时，它所有的依赖者收到通知并且自动更新
 
@@ -36,9 +36,79 @@ HeadFirst设计模式｜学习笔记
 
 > 装饰者模式动态地将责任附加到对象上，若要扩展功能，装饰者提供了比继承更有弹性的替代方案
 
+<img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_design_patterns/decorator.png"/>
 
+- 装饰者一般对组件的客户时透明的，除非客户程序依赖于组件的具体类型
 
+- 组成
 
+	- 抽象组件/ 具体组件
+	- 抽象装饰者/ 具体装饰者
+
+- 例子
+
+	- Starbuzz
+
+	```java
+	Beverage beverage = new darkRoast();
+	beverage = new Mocha(beverage);
+	beverage = new Mocha(beverage);
+	beverage = new Whip(beverage);
+	```
+
+	- Java I/O: inputStream -> bufferedInputStream -> LineNumberInputStream
+
+- 缺点
+
+	- 导致设计中有大量的小类
+
+#### 4. 工厂模式 Factory Pattern
+
+> 工厂模式用来封装对象的创建，并将这样的行为封装在子类中，使得实例化推迟到子类。工厂方法模式通过让子类决定该创建的对象是什么，来达到将对象创建的过程封装的目的。这样，客户程序中关于超类的代码就和子类对象创建代码解耦了
+>
+> 通过抽象工厂所提供的接口，可以创建产品的家族，利用这个接口书写代码，使其与实际工厂解耦，无须指明具体的类
+>
+> abstract Product factoryMethod(String type)
+
+- 工厂：处理创建客户的细节，当其他方法需要调用具体pizza时，就变为该工厂的客户
+
+	```java
+	Public class PizzaStore{
+		SimplePizzaFactory factory;
+	    
+	    public PizzaStore(SimplePizzaFactory factory){
+	        this.factory = factory;
+	    }
+	    
+	    public Pizza orderPizza(String type){
+	        Pizza pizza;
+	        pizza = factory.createPizza(type);
+	        pizza.prepare();
+	        ...
+	        return pizza;
+	    }
+	}
+	```
+
+- 简单工厂更像是一个编程习惯，把所有的事情在一个地方处理完
+
+	<img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_design_patterns/simplefactory.jpg"/>
+
+- 工厂方法
+
+	- 使用继承创建对象，扩展一个类，覆盖他的工厂方法，客户只需要知道所使用的抽象类型，子类来决定具体类型，即只负责将客户从具体类型中解耦
+
+- 抽象工厂
+
+	- 通过对象的组合创建一个产品家族的抽象类型，这个类型的子类定义了产品被产生的方法，若要使用工程，需要先实例化它，然后将它传入一些针对抽象类型所写的代码中，可以把一群相关的产品联合起来
+
+	<img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_design_patterns/compare.jpg"/>
+
+- 抽象工厂模式
+
+	<img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_design_patterns/abstractfactory.jpg"/>
+
+	
 
 # Ⅱ 设计原则
 
@@ -55,6 +125,12 @@ HeadFirst设计模式｜学习笔记
 - 类应该对扩展开放，对修改关闭
 
 	> 允许类容易扩展，再不修改现有代码的情况下，就可搭配新的行为，这样使设计可弹性应对改变
+
+- 要依赖抽象，不要依赖具体类（依赖倒置原则）
+
+	- 变量不可以持有具体类的引用
+	- 不要让类派生自具体类
+	- 不要覆盖基类中已经实现的方法
 
 	
 
