@@ -151,6 +151,14 @@ HeadFirst设计模式｜学习笔记
   ## 6. 命令模式 
 
   > 将“动作的请求者“从”动作的执行者“对象中解耦，利用命令对象，把请求封装成一个特定对象，动作请求者调用命令对象做相关的工作
+  >
+  > 将”请求“封装成对象，以便使用不同的请求、队列或者日志来参数化其他对象，命令模式也支持可撤销的操作
+
+- How
+
+  - 命令对象通过在特定接收者上绑定一组动作来封装一组请求，使得对象只暴露出一个execute()方法
+
+  <img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_design_patterns/command.png"/>
 
 - 命令模式
 
@@ -169,7 +177,7 @@ HeadFirst设计模式｜学习笔记
       }
   }
   
-  public class SimpleRemoteControl{
+  public class SimpleRemoteControl{ // 遥控器
       Command slot;
       public SimpleRemoteControl() {}
       public void setCommand(Command command){
