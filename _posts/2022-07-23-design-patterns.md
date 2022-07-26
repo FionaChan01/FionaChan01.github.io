@@ -72,43 +72,127 @@ HeadFirst设计模式｜学习笔记
 
 - 工厂：处理创建客户的细节，当其他方法需要调用具体pizza时，就变为该工厂的客户
 
-	```java
-	Public class PizzaStore{
-		SimplePizzaFactory factory;
-	    
-	    public PizzaStore(SimplePizzaFactory factory){
-	        this.factory = factory;
-	    }
-	    
-	    public Pizza orderPizza(String type){
-	        Pizza pizza;
-	        pizza = factory.createPizza(type);
-	        pizza.prepare();
-	        ...
-	        return pizza;
-	    }
-	}
-	```
+  ```java
+  Public class PizzaStore{
+  	SimplePizzaFactory factory;
+      
+      public PizzaStore(SimplePizzaFactory factory){
+          this.factory = factory;
+      }
+      
+      public Pizza orderPizza(String type){
+          Pizza pizza;
+          pizza = factory.createPizza(type);
+          pizza.prepare();
+          ...
+          return pizza;
+      }
+  }
+  ```
 
 - 简单工厂更像是一个编程习惯，把所有的事情在一个地方处理完
 
-	<img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_design_patterns/simplefactory.jpg"/>
+  <img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_design_patterns/simplefactory.jpg"/>
 
 - 工厂方法
 
-	- 使用继承创建对象，扩展一个类，覆盖他的工厂方法，客户只需要知道所使用的抽象类型，子类来决定具体类型，即只负责将客户从具体类型中解耦
+  - 使用继承创建对象，扩展一个类，覆盖他的工厂方法，客户只需要知道所使用的抽象类型，子类来决定具体类型，即只负责将客户从具体类型中解耦
 
 - 抽象工厂
 
-	- 通过对象的组合创建一个产品家族的抽象类型，这个类型的子类定义了产品被产生的方法，若要使用工程，需要先实例化它，然后将它传入一些针对抽象类型所写的代码中，可以把一群相关的产品联合起来
+  - 通过对象的组合创建一个产品家族的抽象类型，这个类型的子类定义了产品被产生的方法，若要使用工程，需要先实例化它，然后将它传入一些针对抽象类型所写的代码中，可以把一群相关的产品联合起来
 
-	<img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_design_patterns/compare.jpg"/>
+  <img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_design_patterns/compare.jpg"/>
 
 - 抽象工厂模式
 
-	<img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_design_patterns/abstractfactory.jpg"/>
+  <img src="https://raw.githubusercontent.com/FionaChan01/FionaChan01.github.io/master/post_image/post_design_patterns/abstractfactory.jpg"/>
 
-	
+  ## 5. 单件模式 Singleton Pattern
+
+  [5. The Singleton Pattern: One of a Kind Objects - Head First Design Patterns [Book\] (oreilly.com)](https://www.oreilly.com/library/view/head-first-design/0596007124/ch05.html)
+
+  > 确保只有一个实例被创建，提供一个全局访问点，且不具有全局变量的缺点（必须在程序一开始就创建好对象），单件模式在需要时才创建对象，可以延迟实例化
+  >
+  > 单件模式确保一个类只有一个实例，并且提供一个全局访问点
+
+- 改善多线程模式下的缺点
+
+  - 在getInstance()方法中加入关键字synchronized，以此来保证每个线程在进入这个方法之前需要等待别的线程离开该方法 -> 每次调用需要同步，降低性能
+
+  - 使用急切创建实例，而不用延迟实例化的做法
+
+    ```java
+    public class Singleton {
+        private static Singleton uniqueInstance = new Singleton();
+        private Singleton();
+        publich static Singleton getInstance() {
+            return uniqueInstance;
+        }
+    }
+    ```
+
+  - 用双重检查加锁，在getInstance()中减少使用同步
+
+    ```jAVA
+    public class Singleton {
+        private volatile static Singleton uniqueInstance;
+        private Singleton();
+        publich static Singleton getInstance() {
+            if (uniqueInstance == null){
+                // 只有第一次才执行这里的代码
+                uniqueInstance = new Singleton();
+            }
+            return uniqueInstance;
+        }
+    }
+    ```
+
+  ## 6. 命令模式 
+
+  > 将“动作的请求者“从”动作的执行者“对象中解耦，利用命令对象，把请求封装成一个特定对象，动作请求者调用命令对象做相关的工作
+
+- 命令模式
+
+  ```java
+  public interface Command {
+      public void execute();
+  }
+  
+  public class LightOnCommand implements Command {
+      Light light;
+      public LightOnCommand(Light light){
+          this.light = light;
+      }
+      public void execute() {
+          light.on();
+      }
+  }
+  
+  public class SimpleRemoteControl{
+      Command slot;
+      public SimpleRemoteControl() {}
+      public void setCommand(Command command){
+          slot = command;
+      }
+      public void buttonWasPressed() {
+          slot.execute();
+      }
+  }
+  
+  public class RemoteControlTest { // 命令模式的客户
+      public static void main(String[] args){
+          SimpleRemoteControl remote = new SimpleRemoteControl(); // 调用者是遥控器，传入一个命令对象发出请求
+          Light light = new Light(); // 电灯对象，是请求的接收者
+          LightOnCommand lightOn = new LightOnCommand(light); // 创建一个命令，将接收者传给他
+          
+          remote.setCommand(lightOn); // 把命令传给调用者
+          remote.buttonWasPressed();
+      }
+  }
+  ```
+
+  
 
 # Ⅱ 设计原则
 
